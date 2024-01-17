@@ -1,0 +1,1 @@
+kubectl get endpoints frontend-app-cluster-ip -o json | jq '.subsets[0].addresses'

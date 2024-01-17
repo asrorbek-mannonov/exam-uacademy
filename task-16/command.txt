@@ -1,0 +1,1 @@
+kubectl get endpointslices.discovery.k8s.io -n exam-46 | grep -E 'frontend-app-cluster-ip*' | cut -d' ' -f 1

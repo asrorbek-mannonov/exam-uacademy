@@ -1,0 +1,3 @@
+NAME               DATA   AGE
+info               3      44s
+kube-root-ca.crt   1      23m

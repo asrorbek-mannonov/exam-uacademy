@@ -1,0 +1,1 @@
+kubectl port-forward pod/flask-app-54559c45cc-7zsm7 5000:5000

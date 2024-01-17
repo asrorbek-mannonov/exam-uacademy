@@ -1,0 +1,32 @@
+[
+  {
+    "ip": "10.233.65.144",
+    "nodeName": "node4",
+    "targetRef": {
+      "kind": "Pod",
+      "name": "frontend-app-566f6b7d6d-whp9m",
+      "namespace": "exam-46",
+      "uid": "4b813cbe-b990-4003-859e-1ccc3bd5857e"
+    }
+  },
+  {
+    "ip": "10.233.66.123",
+    "nodeName": "node2",
+    "targetRef": {
+      "kind": "Pod",
+      "name": "frontend-app-566f6b7d6d-4j5j5",
+      "namespace": "exam-46",
+      "uid": "4b23d5ff-c67d-46cc-bb6b-c15b0325059f"
+    }
+  },
+  {
+    "ip": "10.233.69.153",
+    "nodeName": "node1",
+    "targetRef": {
+      "kind": "Pod",
+      "name": "frontend-app-566f6b7d6d-qc66x",
+      "namespace": "exam-46",
+      "uid": "62b49e47-02fd-459a-9152-ae993e497b57"
+    }
+  }
+]

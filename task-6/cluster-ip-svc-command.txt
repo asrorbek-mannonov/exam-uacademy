@@ -1,0 +1,1 @@
+kubectl expose deploy flask-app --target-port 5000 --port 80 -n exam-46

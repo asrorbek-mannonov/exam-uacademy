@@ -1,0 +1,67 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: frontend-app
+  name: frontend-app
+  namespace: exam-46
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: frontend-app
+    spec:
+      containers:
+      - image: asrorbekm/repo-2
+        name: repo-2-container
+        env:
+        - name: ENVIRONMENT
+          valueFrom:
+            configMapKeyRef:
+              name: info
+              key: env
+        - name: LOG_LEVEL
+          valueFrom:
+            configMapKeyRef:
+              name: info
+              key: log_leveI
+        - name: DB_URI
+          valueFrom:
+            secretKeyRef:
+              name: database
+              key: DB_URI
+        - name: GRPC_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: info
+              key: grpc_port
+        - name: CPU
+          valueFrom:
+            resourceFieldRef:
+              containerName: repo-2-container
+              resource: requests.cpu
+        - name: MEMORY
+          valueFrom:
+            resourceFieldRef:
+              containerName: repo-2-container
+              resource: requests.memory
+        - name: POD_ID
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.uid 
+        resources:
+          limits:
+            cpu: "200m"
+            memory: "128Mi"
+          requests:
+            cpu: "100m"
+            memory: "64Mi"
+
+status: {}

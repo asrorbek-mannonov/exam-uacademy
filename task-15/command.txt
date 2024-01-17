@@ -1,0 +1,1 @@
+kubectl scale deploy frontend-app --replicas 3 -n exam-46

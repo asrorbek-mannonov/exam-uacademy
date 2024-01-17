@@ -1,0 +1,1 @@
+kubectl create deploy flask-app --image nvrbckdown/flask-app -r 1 -n exam-46

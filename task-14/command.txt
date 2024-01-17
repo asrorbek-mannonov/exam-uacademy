@@ -1,0 +1,1 @@
+kubectl create ingress frontend-app-ingress --rule="asrorbek.nvrbckdown.uz/*=frontend-app-cluster-ip:80" --class nginx -n exam-46
