@@ -7,7 +7,7 @@ metadata:
   name: frontend-app
   namespace: exam-46
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: frontend-app
@@ -42,9 +42,9 @@ spec:
             configMapKeyRef:
               name: info
               key: grpc_port
-        - name: POD_ID
+        - name: POD_IP
           valueFrom:
             fieldRef:
-              fieldPath: metadata.uid 
+              fieldPath: status.podIP
         resources: {}
 status: {}
